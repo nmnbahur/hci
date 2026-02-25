@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccessAbility | HCI Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    <!-- Placeholder for FA -->
+</head>
+
+<body class="dark-mode">
+    <nav id="main-nav" role="navigation" aria-label="Main Navigation">
+        <div class="logo">
+            <span class="icon" aria-hidden="true">♾️</span>
+            <h1>AccessAbility</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-item" id="nav-home" tabindex="0">Home</a></li>
+            <li><a href="#courses" class="nav-item" id="nav-courses" tabindex="0">Courses</a></li>
+            <li><a href="#interaction" class="nav-item" id="nav-interaction" tabindex="0">Modes</a></li>
+            <li><a href="#contact" class="nav-item" id="nav-contact" tabindex="0">Contact</a></li>
+        </ul>
+        <button id="voice-trigger" class="btn-voice" aria-label="Enable Voice Recognition">
+            <span class="mic-icon">🎤</span>
+        </button>
+    </nav>
+
+    <main id="main-content">
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2 class="animate-up">Mastering Human-Computer Interaction</h2>
+                <p class="animate-up-delay">Designing for accessibility is not just a feature, it's a foundation.</p>
+                <div class="hero-actions animate-up-delay-2">
+                    <button class="btn-primary" id="btn-explore">Explore Courses</button>
+                    <button class="btn-secondary" id="btn-learn">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- Visual cue for interaction -->
+                <div class="interaction-pulse" aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <section id="courses" class="courses-grid">
+            <h2 class="section-title">Available Modules</h2>
+            <div class="card-container">
+                <div class="course-card" tabindex="0">
+                    <div class="card-icon">⌨️</div>
+                    <h3>Keyboard Navigation</h3>
+                    <p>Learn how to design systems that don't rely on a mouse.</p>
+                </div>
+                <div class="course-card" tabindex="0">
+                    <div class="card-icon">🖐️</div>
+                    <h3>Touch Interfaces</h3>
+                    <p>Optimizing for mobile and ergonomic touch gestures.</p>
+                </div>
+                <div class="course-card" tabindex="0">
+                    <div class="card-icon">🗣️</div>
+                    <h3>Voice Control</h3>
+                    <p>Implementing Web Speech API for hands-free interaction.</p>
+                </div>
+            </div>
+            <section id="contact" class="contact-section">
+                <h2 class="section-title">Get in Touch</h2>
+                <form id="hci-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" placeholder="How can we help?"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" id="btn-submit">Submit Form</button>
+                </form>
+            </section>
+
+            <div id="status-toast" class="toast hidden" role="alert">
+                <p id="toast-message"></p>
+            </div>
+    </main>
+
+    <footer id="main-footer">
+        <p>&copy; 2026 AccessAbility HCI Project. Designed for All.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
